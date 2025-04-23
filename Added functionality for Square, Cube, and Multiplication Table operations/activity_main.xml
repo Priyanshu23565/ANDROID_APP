@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <!-- Dropdown with Icons -->
+    <Spinner
+        android:id="@+id/spinnerOperation"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Number Input with Icon -->
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerOperation"
+        android:hint="Enter a number"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Range Input with Icon -->
+    <EditText
+        android:id="@+id/etRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etNumber"
+        android:hint="Enter range (e.g., 10)"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Generate Button with Icon -->
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etRange"
+        android:text="Generate"
+        android:backgroundTint="#4CAF50"/>
+
+    <!-- Result Display -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGenerate"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:lineSpacingExtra="8dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"/>
+    </ScrollView>
+
+</RelativeLayout>
